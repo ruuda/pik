@@ -121,12 +121,7 @@ bool ButteraugliAdaptiveQuantization(size_t xsize, size_t ysize,
 #endif
 
 #ifdef __clang__
-  #if __has_builtin(__builtin_assume_aligned)
-    #define BUTTERAUGLI_ASSUME_ALIGNED(ptr, align) __builtin_assume_aligned((ptr), (align))
-  #else
-    // Older versions of Clang did not support __builtin_assume_aligned yet.
-    #define BUTTERAUGLI_ASSUME_ALIGNED(ptr, align) (ptr)
-  #endif
+  #define BUTTERAUGLI_ASSUME_ALIGNED(ptr, align) __builtin_assume_aligned((ptr), (align))
 #elif defined(__GNUC__)
   #define BUTTERAUGLI_ASSUME_ALIGNED(ptr, align) __builtin_assume_aligned((ptr), (align))
 #else
