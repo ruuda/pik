@@ -1,3 +1,7 @@
+# Pik
+
+[![Build status][build-status-img]][build-status]
+
 Pik is a new lossy image format for the internet. This directory contains
 an encoder and a decoder for the format.
 
@@ -23,3 +27,6 @@ visually lossless result.
 *   Guetzli (JPEG encoder with denser packing)
 
 This is not an official Google product.
+
+[build-status]:     https://travis-ci.org/ruuda/pik
+[build-status-img]: https://travis-ci.org/ruuda/pik.svg?branch=master
