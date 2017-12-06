@@ -3,7 +3,8 @@ language: cpp
 dist: trusty
 
 compiler:
-  - clang
+  - clang-3.9
+  - clang-3.8
   - gcc
 
 addons:
